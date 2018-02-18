@@ -1,45 +1,34 @@
 import React, { Component } from 'react'
-import { View, Text, Image, AppRegistry, StyleSheet } from 'react-native'
+import {View,
+        Text,
+        Image, 
+        AppRegistry,
+        TouchableHighlight, 
+        StyleSheet 
+} from 'react-native'
+import { StackNavigator } from 'react-navigation'
 
-export default class Select extends Component {
+import {App, RootStack, test2} from '../../App'
+
+export default class Select extends React.Component {
     render() {
-        let hearth = {
-            uri: require('./../img/hearth.png')
-        }
-
-        let rendezvous = {
-            uri: require('./../img/calendar.png')
-        }
-
-        let ordonance = {
-            uri: require('./../img/ordonance.png')
-        }
-
-        let rappel = {
-            uri: require('./../img/rappel.png')
-        }
-
-        let contact = {
-            uri: require('./../img/phone.png')
-        }
-
-        let cog = {
-            uri: require('./../img/cog.png')
-        }
 
         return (
             <View style={styles.container}>
                 <View style={styles.block}>
                     <View>
-                        <Image
-                            source={hearth.uri}
-                            style={styles.image}
-                        />
-                        <Text style={styles.text}> Carnet de suivis</Text>
+                        <TouchableHighlight  onPress={() => this.props.navigation.navigate('Suivis')}>
+                            <Text>hello</Text>
+                        </TouchableHighlight>
+                            <Image
+                                source={require('../img/hearth.png')}
+                                style={styles.image}
+                            />
+                            <Text style={styles.text}> Carnet de suivis</Text>
                     </View>
                     <View>
                         <Image
-                            source={rendezvous.uri}
+                            source={require('../img/calendar.png')}
                             style={styles.image}
                         />
                         <Text style={styles.text}> Rendez-vous</Text>
@@ -48,14 +37,14 @@ export default class Select extends Component {
                 <View style={styles.block}>
                     <View>
                         <Image
-                            source={ordonance.uri}
+                            source={require('../img/ordonance.png')}
                             style={styles.image}
                         />
                         <Text style={styles.text}> Ordonance</Text>
                     </View>
                     <View>
                         <Image
-                            source={rappel.uri}
+                            source={require('../img/rappel.png')}
                             style={styles.image}
                         />
                         <Text style={styles.text}> Rappels</Text>
@@ -64,14 +53,14 @@ export default class Select extends Component {
                 <View style={styles.block}>
                     <View>
                         <Image
-                            source={contact.uri}
+                            source={require('../img/phone.png')}
                             style={styles.image}
                         />
                         <Text style={styles.text}> Contact</Text>
                     </View>
                     <View>
                         <Image
-                            source={cog.uri}
+                            source={require('../img/cog.png')}
                             style={styles.image}
                         />
                         <Text style={styles.text}> Paramétres</Text>

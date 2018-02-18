@@ -29,7 +29,6 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
     header: {
-        marginTop: -30,
         zIndex: 30,
     },
 
