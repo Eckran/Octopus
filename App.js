@@ -1,26 +1,37 @@
-import React, {component} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { Button, View, Text } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 
-import Header from './src/component/header'
-import Select from './src/pages/select'
+import HomeScreen from './src/pages/homeScreen'
+import SuivisScreen from './src/pages/suivis'
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Header />
-        <Select />
+
+export class test2 extends React.Component {
+  render(){
+    return(
+      <View>
+        <Text>hello test2</Text>
       </View>
-    );
+    )
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#eff7f9',
-    alignItems: 'center',
-    justifyContent: 'center',
+export const RootStack = StackNavigator(
+  {
+    Home: {
+      screen: HomeScreen,
+    },
+    Suivis: {
+      screen: test2,
+    }
   },
+  {
+    initialRouteName: 'Home',
+  }
+);
 
-});
+export default class App extends React.Component {
+  render() {
+    return <RootStack />;
+  }
+}
