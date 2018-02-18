@@ -4,17 +4,11 @@ import { StackNavigator } from 'react-navigation';
 
 import HomeScreen from './src/pages/homeScreen'
 import SuivisScreen from './src/pages/suivis'
-
-
-export class test2 extends React.Component {
-  render(){
-    return(
-      <View>
-        <Text>hello test2</Text>
-      </View>
-    )
-  }
-}
+import RendezVous from './src/pages/rendezvous'
+import Ordonances from './src/pages/ordonance'
+import Rappels from './src/pages/rappels'
+import Contact from './src/pages/contact'
+import Cog from './src/pages/cog'
 
 export const RootStack = StackNavigator(
   {
@@ -22,8 +16,23 @@ export const RootStack = StackNavigator(
       screen: HomeScreen,
     },
     Suivis: {
-      screen: test2,
-    }
+      screen: SuivisScreen,
+    },
+    RendezVous: {
+      screen: RendezVous,
+    },
+    Ordonance: {
+      screen: Ordonances,
+    },
+    Rappels: {
+      screen: Rappels,
+    },
+    Contact: {
+      screen: Contact,
+    },
+    Cog: {
+      screen: Cog,
+    },
   },
   {
     initialRouteName: 'Home',

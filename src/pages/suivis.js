@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
-import {View, Text, AppRegistry} from 'react-native'
+import {View, Text, Button, AppRegistry} from 'react-native'
+import { StackNavigator } from 'react-navigation'
 
 export default class SuivisScreen extends React.Component {
+
     render() {
         return(
             <View>
-                <Text>hello</Text>
+                <Text> page suivis </Text>
             </View>
         )
     }

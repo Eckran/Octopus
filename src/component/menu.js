@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {View, Text, AppRegistry, StyleSheet} from 'react-native'
 import {Icon} from 'react-native-elements'
+import { StackNavigator } from 'react-navigation'
 
 import MenuNav from './menuNav'
 
