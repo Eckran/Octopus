@@ -1,79 +1,94 @@
 import React, { component } from 'react';
-import { StyleSheet, Text, View, TouchableHighlight, Image, } from 'react-native';
+import { StyleSheet, Text, View, TouchableHighlight, Image } from 'react-native';
 import { StackNavigator } from 'react-navigation'
 
-import Header from './../component/header'
+class LogoTitle extends React.Component {
+  render() {
+    return (
+      <Image
+        source={require('../img/logo.png')}
+        style={{ width: 250, height: 50 }}
+      />
+    );
+  }
+}
 
 export default class HomeScreen extends React.Component {
+
+  static navigationOptions = {
+    headerTitle: <LogoTitle />,
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <Header />
-        <View style={styles.container2}>
-          <View style={styles.block}>
+        <Image
+          source={require('../img/fondmenu.png')}
+          style={styles.FondMenu}
+        />
+        <View style={styles.block}>
+          <View>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('Suivis')} >
+              <View>
+                <Image
+                  source={require('../img/hearth.png')}
+                  style={styles.image}
+                />
+                <Text style={styles.text}> Carnet de suivi</Text>
+              </View>
+            </TouchableHighlight>
+          </View>
+          <View>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('RendezVous')} >
+              <View>
+                <Image
+                  source={require('../img/calendar.png')}
+                  style={styles.image}
+                />
+                <Text style={styles.text}> Rendez-vous</Text>
+              </View>
+            </TouchableHighlight>
+          </View>
+        </View>
+        <View style={styles.block}>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Ordonance')} >
             <View>
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('Suivis')} >
-                <View>
-                  <Image
-                    source={require('../img/hearth.png')}
-                    style={styles.image}
-                  />
-                  <Text style={styles.text}> Carnet de suivis</Text>
-                </View>
-              </TouchableHighlight>
+              <Image
+                source={require('../img/ordonance.png')}
+                style={styles.image}
+              />
+              <Text style={styles.text}> Ordonances</Text>
             </View>
+          </TouchableHighlight>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Rappels')} >
             <View>
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('RendezVous')} >
-                <View>
-                  <Image
-                    source={require('../img/calendar.png')}
-                    style={styles.image}
-                  />
-                  <Text style={styles.text}> Rendez-vous</Text>
-                </View>
-              </TouchableHighlight>
+              <Image
+                source={require('../img/rappel.png')}
+                style={styles.image}
+              />
+              <Text style={styles.text}> Rappels</Text>
             </View>
-          </View>
-          <View style={styles.block}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Ordonance')} >
-              <View>
-                <Image
-                  source={require('../img/ordonance.png')}
-                  style={styles.image}
-                />
-                <Text style={styles.text}> Ordonances</Text>
-              </View>
-            </TouchableHighlight>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Rappels')} >
-              <View>
-                <Image
-                  source={require('../img/rappel.png')}
-                  style={styles.image}
-                />
-                <Text style={styles.text}> Rappels</Text>
-              </View>
-            </TouchableHighlight>
-          </View>
-          <View style={styles.block}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Contact')} >
-              <View>
-                <Image
-                  source={require('../img/phone.png')}
-                  style={styles.image}
-                />
-                <Text style={styles.text}> Contact</Text>
-              </View>
-            </TouchableHighlight>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Cog')} >
-              <View>
-                <Image
-                  source={require('../img/cog.png')}
-                  style={styles.image}
-                />
-                <Text style={styles.text}> Paramétres</Text>
-              </View>
-            </TouchableHighlight>
-          </View>
+          </TouchableHighlight>
+        </View>
+        <View style={styles.block}>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Contact')} >
+            <View>
+              <Image
+                source={require('../img/phone.png')}
+                style={styles.image}
+              />
+              <Text style={styles.text}> Contacts</Text>
+            </View>
+          </TouchableHighlight>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Cog')} >
+            <View>
+              <Image
+                source={require('../img/cog.png')}
+                style={styles.image}
+              />
+              <Text style={styles.text}> Paramètres</Text>
+            </View>
+          </TouchableHighlight>
         </View>
       </View>
     );
@@ -83,13 +98,9 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#eff7f9',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  container2: {
-    marginTop: 30,
-    zIndex: 1,
+    marginTop: -80,
   },
 
   block: {
@@ -97,17 +108,26 @@ const styles = StyleSheet.create({
     marginLeft: -160,
     marginTop: 15,
     maxWidth: 200,
+    zIndex: 5,
   },
 
   image: {
     width: 180,
     height: 180,
+    zIndex: 5,
   },
 
   text: {
     textAlign: 'center',
     marginTop: -30,
     fontSize: 20,
+  },
+
+  FondMenu: {
+    zIndex: 1,
+    position: 'absolute',
+    width: 400,
+    height: 800,
   }
 
 });
