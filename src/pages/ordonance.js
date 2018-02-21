@@ -18,6 +18,7 @@ export default class Ordonances extends React.Component {
     render() {
         return(
             <View>
+                <View style={styles.fond} />
                 <Image
                     source={require('../img/small-couv.png')}
                     style={styles.header}
@@ -31,7 +32,9 @@ export default class Ordonances extends React.Component {
 const styles = StyleSheet.create({
 
     fond: {
-        backgroundColor: 'red'
+        backgroundColor: 'red',
+        height: 100,
+        width: 100,
     },
     header: {
         position: 'absolute',

@@ -13,7 +13,7 @@ class LogoTitle extends React.Component {
   }
 }
 
-export default class HomeScreen extends React.Component {
+export class HomeScreen extends React.Component {
 
   static navigationOptions = {
     headerTitle: <LogoTitle />,
@@ -28,7 +28,7 @@ export default class HomeScreen extends React.Component {
         />
         <View style={styles.block}>
           <View>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Suivis')} >
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('Suivi')} >
               <View>
                 <Image
                   source={require('../img/hearth.png')}
