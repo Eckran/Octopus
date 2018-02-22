@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
-import {View} from 'react-native'
-import {DrawerNavigator} from 'react-navigation'
+import {AppRegistry} from 'react-native'
+import {Icon} from 'react-native-elements'
+import {DrawerNavigator, NavigationActions} from 'react-navigation'
 
 //route
 import { Stack } from './RootStack'
@@ -35,10 +36,26 @@ const Drawer = DrawerNavigator({
     },
 })
 
+const iconSize = 50
+
+export const MenuButton = (props) => {
+    return (
+            <Icon
+                name='menu'
+                color='#662680'
+                size={iconSize}
+                onPress={() => props.navigate('DrawerToggle')}
+            />
+    )
+}
+
 export default class DrawerNav extends React.Component {
+    
     render(){
     return (
     <Drawer />
     ) 
     }
 }
+
+AppRegistry.registerComponent('DrawerNav', () => DrawerNav);

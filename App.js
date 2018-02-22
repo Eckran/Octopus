@@ -1,11 +1,20 @@
 import React from 'react';
-import { Button, View, Text } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import {AppRegistry} from 'react-native'
+import {Icon} from 'react-native-elements'
+import {NavigationActions, DrawerNavigator, StackNavigator} from 'react-navigation'
 
-import All from './src/navigation/Navigation'
+import DrawerNav from './src/navigation/Navigation'
 
 export default class App extends React.Component {
+
+  constructor(props){
+    super(props)
+  }
+
   render() {
-    return <All />;
+    return <DrawerNav  />;
   }
 }
+
+
+AppRegistry.registerComponent('App', () => App);

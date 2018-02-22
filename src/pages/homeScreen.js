@@ -1,6 +1,11 @@
 import React, { component } from 'react';
 import { StyleSheet, Text, View, TouchableHighlight, Image } from 'react-native';
-import { StackNavigator } from 'react-navigation'
+import { Icon } from 'react-native-elements'
+import { StackNavigator, DrawerNavigator, NavigationActions } from 'react-navigation'
+
+import DrawerNav from '../navigation/Navigation'
+
+import {MenuButton} from '../navigation/Navigation'
 
 class LogoTitle extends React.Component {
   render() {
@@ -15,11 +20,13 @@ class LogoTitle extends React.Component {
 
 export class HomeScreen extends React.Component {
 
-  static navigationOptions = {
+  static navigationOptions = ({navigation, screenProps}) => ({
     headerTitle: <LogoTitle />,
-  };
+    headerLeft: <MenuButton navigate={screenProps.drawerNavigation.navigate} />,
+  })
 
   render() {
+    console.log(this.props)
     return (
       <View style={styles.container}>
         <Image
@@ -121,6 +128,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: -30,
     fontSize: 20,
+    color: "#f3f4f3"
   },
 
   FondMenu: {

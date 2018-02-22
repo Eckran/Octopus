@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, View, Text } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import {AppRegistry} from 'react-native'
+import {Icon} from 'react-native-elements'
+import { StackNavigator, NavigationActions } from 'react-navigation';
 
 import { HomeScreen } from '../pages/HomeScreen'
 import Suivi from '../pages/suivis'
@@ -36,12 +37,16 @@ const RootStack = StackNavigator(
         },
     },
     {
-      initialRouteName: 'Acceuil',
+        initialRouteName: 'Acceuil',
     }
-  );
+);
 
 export class Stack extends React.Component {
-render() {
-    return <RootStack />;
+
+    render() {
+        return (<RootStack screenProps={{drawerNavigation: this.props.navigation}} />);
+    }
 }
-}
+
+
+// AppRegistry.registerComponent('DrawerNav', () => DrawerNav);
