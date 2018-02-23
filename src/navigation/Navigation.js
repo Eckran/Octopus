@@ -50,7 +50,7 @@ export const MenuButton = (props) => {
 }
 
 export default class DrawerNav extends React.Component {
-    
+
     render(){
     return (
     <Drawer />
