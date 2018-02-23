@@ -4,13 +4,12 @@ import {Icon} from 'react-native-elements'
 import {NavigationActions, DrawerNavigator, StackNavigator} from 'react-navigation'
 
 import DrawerNav from './src/navigation/Navigation'
-import Register from './src/pages/login/register'
-import Login from './src/pages/login/login'
+import LoginNav from './src/navigation/loginNav'
 
 export default class App extends React.Component {
 
   render() {
-    return <Register />;
+    return <LoginNav />;
   }
 }
 

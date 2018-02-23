@@ -24,9 +24,16 @@ export default class Register extends React.Component {
         }
     }
 
-    console = () => {
-        console.log('hello')
-    }
+    static navigationOptions = {
+        title: 'Inscription',
+        headerStyle: {
+            backgroundColor: '#f3f4f3',
+        },
+        headerTintColor: '#662680',
+        headerTitleStyle: {
+            fontSize: 30,
+        }
+      };
 
     postData = () => {
         console.log('init')
@@ -103,11 +110,11 @@ export default class Register extends React.Component {
                     />
                 </View>
                 <TouchableHighlight
-                    onPress={this.console}
+                    onPress={this.postData}
                     style={styles.validate}
                 >
                     <View>
-                        <Text style={{ fontSize: 20, color: '#f3f4f3', textAlign: 'center', }}> VALIDER </Text>
+                        <Text style={{ fontSize: 20, color: '#f3f4f3', textAlign: 'center', }}> S'INSCRIRE </Text>
                     </View>
                 </TouchableHighlight>
             </View>
