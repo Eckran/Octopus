@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
 
   text: {
     textAlign: 'center',
-    marginTop: -30,
+    marginTop: -50,
     fontSize: 20,
     color: "#f3f4f3"
   },
