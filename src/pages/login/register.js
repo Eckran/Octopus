@@ -33,7 +33,7 @@ export default class Register extends React.Component {
         headerTitleStyle: {
             fontSize: 30,
         }
-      };
+    };
 
     postData = () => {
         console.log('init')
@@ -45,14 +45,23 @@ export default class Register extends React.Component {
 
         };
 
-        const newPostKey = firebase.database().ref().child('users').push().key;
-        let updates = {};
+        if (this.state.password === this.state.confirmPassword) {
 
-        updates['/users/' + newPostKey] = postData;
+            const newPostKey = firebase.database().ref().child('users').push().key;
+            let updates = {};
 
-        firebase.database().ref().update(updates);
-        alert(title = "Compte créé", message = "Votre compte à bien été créé", )
-        console.log('finish')
+            updates['/users/' + newPostKey] = postData;
+
+            firebase.database().ref().update(updates);
+            alert(title = "Compte créé", message = "Votre compte à bien été créé", )
+            console.log('finish')
+
+        } else {
+
+            alert('Erreur entre les mots de passes, Veuillez ressayer')
+
+        }
+
     }
 
     render() {
@@ -68,7 +77,7 @@ export default class Register extends React.Component {
                         onChangeText={(text) => this.setState({ pseudo: text, })}
                         placeholder={this.state.pseudo}
                     />
-                    <Image 
+                    <Image
                         source={require('../../img/trait-input.png')}
                         style={styles.trait}
                     />
@@ -77,7 +86,7 @@ export default class Register extends React.Component {
                         onChangeText={(text) => this.setState({ puceId: text, })}
                         placeholder={this.state.puceId}
                     />
-                    <Image 
+                    <Image
                         source={require('../../img/trait-input.png')}
                         style={styles.trait}
                     />
@@ -86,7 +95,7 @@ export default class Register extends React.Component {
                         onChangeText={(text) => this.setState({ mail: text, })}
                         placeholder={this.state.mail}
                     />
-                    <Image 
+                    <Image
                         source={require('../../img/trait-input.png')}
                         style={styles.trait}
                     />
@@ -95,7 +104,7 @@ export default class Register extends React.Component {
                         onChangeText={(text) => this.setState({ password: text, })}
                         placeholder={this.state.password}
                     />
-                    <Image 
+                    <Image
                         source={require('../../img/trait-input.png')}
                         style={styles.trait}
                     />
@@ -104,7 +113,7 @@ export default class Register extends React.Component {
                         onChangeText={(text) => this.setState({ confirmPassword: text, })}
                         placeholder={this.state.confirmPassword}
                     />
-                    <Image 
+                    <Image
                         source={require('../../img/trait-input.png')}
                         style={styles.trait}
                     />
