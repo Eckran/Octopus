@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { View, Text, TextInput, TouchableHighlight, Image, Button, StyleSheet } from 'react-native'
+import { View, Text, TextInput, TouchableHighlight, Image, StyleSheet } from 'react-native'
+import {Button} from 'react-native-elements'
 import {StackNavigator} from 'react-navigation'
 
 import '../login/register'
