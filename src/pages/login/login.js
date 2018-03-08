@@ -78,7 +78,7 @@ export default class Login extends React.Component {
                 </TouchableHighlight>
                 </View>
                 <TouchableHighlight
-                    onPress={this.console}
+                    onPress={() => this.props.navigation.navigate('Home')}
                     style={styles.validate}
                 >
                     <View>

@@ -5,6 +5,7 @@ import { StackNavigator, NavigationActions } from 'react-navigation';
 
 import Login from '../pages/login/login'
 import Register from '../pages/login/register'
+import DrawStack from '../navigation/Navigation'
 
 //route
 const LoginStack = StackNavigator(
@@ -15,9 +16,13 @@ const LoginStack = StackNavigator(
         Register: {
             screen: Register,
         },
+        Home: {
+            screen: DrawStack,
+        }
     },
     {
         initialRouteName: 'Login',
+        headerMode: 'none',
     }
 );
 

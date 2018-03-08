@@ -67,10 +67,31 @@ export default class Register extends React.Component {
     render() {
         return (
             <View style={styles.container}>
+
                 <Image
                     source={require('../../img/logo-connexion.png')}
                     style={styles.logoC}
                 />
+                <View style={styles.ConnectBox}>
+                    <Button
+                        title="Connexion"
+                        onPress={() => this.props.navigation.goBack()}
+                        color='grey'
+                    />
+                    <Image
+                        source={require('../../img/sconnex.png')}
+                        style={{ width: 10, height: 50, marginRight: 10, }}
+                    />
+                    <View style={{ flexDirection: 'column' }}>
+                        <Text style={{ fontSize: 20, color: '#662680', marginTop: 6, }}>
+                            Inscription
+                    </Text>
+                        <Image
+                            source={require('../../img/trait-input.png')}
+                            style={{ width: 95, height: 40, marginTop: -13, }}
+                        />
+                    </View>
+                </View>
                 <View style={{ marginBottom: 30, }}>
                     <TextInput
                         style={styles.Input}
@@ -163,5 +184,8 @@ const styles = StyleSheet.create({
         marginTop: -20,
         marginBottom: -5,
         marginLeft: -12,
-    }
+    },
+    ConnectBox: {
+        flexDirection: 'row',
+    },
 });
