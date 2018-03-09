@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {View, Text, Button, Image, StyleSheet, AppRegistry} from 'react-native'
 import { StackNavigator } from 'react-navigation'
 
-export default class Ordonances extends React.Component {
+export default class Contact extends React.Component {
 
     static navigationOptions = {
         title: 'Ordonnances',
@@ -14,16 +14,15 @@ export default class Ordonances extends React.Component {
             fontSize: 30,
         }
       };
-      
+
     render() {
         return(
             <View>
-                <View style={styles.fond} />
                 <Image
                     source={require('../img/small-couv.png')}
                     style={styles.header}
                 />
-                <Text>page des Ordonances </Text>
+                <Text> page Ordonnances</Text>
             </View>
         )
     }
@@ -32,17 +31,15 @@ export default class Ordonances extends React.Component {
 const styles = StyleSheet.create({
 
     fond: {
-        backgroundColor: 'red',
-        height: 100,
-        width: 100,
+        backgroundColor: 'red'
     },
     header: {
         position: 'absolute',
-        width: 400,
-        height: 80,
-        marginTop: -79,
-
+        width: '155%',
+        height: '200%',
+        marginTop: '-18%',
+        marginLeft: '-5%',
     }
 })
 
-AppRegistry.registerComponent('Ordonances', () => Ordonances);
+AppRegistry.registerComponent('Ordonnance', () => Ordonnace);

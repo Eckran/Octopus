@@ -106,14 +106,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: -80,
   },
 
   block: {
     flexDirection: 'row',
-    marginLeft: -160,
-    marginTop: 15,
-    maxWidth: 200,
+    marginBottom: '10%',
     zIndex: 5,
   },
 
@@ -125,7 +122,7 @@ const styles = StyleSheet.create({
 
   text: {
     textAlign: 'center',
-    marginTop: -50,
+    marginTop: '-25%',
     fontSize: 20,
     color: "#f3f4f3"
   },
@@ -133,8 +130,8 @@ const styles = StyleSheet.create({
   FondMenu: {
     zIndex: 1,
     position: 'absolute',
-    width: 400,
-    height: 800,
+    width: '110%',
+    height: '120%',
   }
 
 });

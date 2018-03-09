@@ -35,10 +35,10 @@ const styles = StyleSheet.create({
     },
     header: {
         position: 'absolute',
-        width: 400,
-        height: 80,
-        marginTop: -79,
-
+        width: '155%',
+        height: '200%',
+        marginTop: '-18%',
+        marginLeft: '-5%',
     }
 })
 

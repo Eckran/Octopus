@@ -89,10 +89,9 @@ export default class Login extends React.Component {
                     />
                 </View>
                 <View style={styles.check}>
-                    <Text style={{ marginTop: 11, }}> Se souvenir de moi </Text>
                     <TouchableHighlight
                         onPress={this.console}
-                        style={{ width: 200, height: 20, marginLeft: 20, marginTop: 10, }}
+                        style={{ width: 200, height: 20, }}
                     >
                         <View>
                             <Text style={{ fontSize: 15, color: '#000', textAlign: 'center', }}> Mot de passe oublié ? </Text>
@@ -100,7 +99,6 @@ export default class Login extends React.Component {
                     </TouchableHighlight>
                 </View>
                 <TouchableHighlight
-                    //onPress={() => this.props.navigation.navigate('Home')}
                     onPress={this.connected}
                     style={styles.validate}
                 >
