@@ -9,7 +9,7 @@ import Info from './src/pages/routes/information'
 export default class App extends React.Component {
 
   render() {
-    return <Info />;
+    return <LoginNav />;
   }
 }
 
