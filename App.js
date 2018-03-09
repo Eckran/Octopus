@@ -1,26 +1,17 @@
-import React, {component} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import {AppRegistry} from 'react-native'
+import {Icon} from 'react-native-elements'
+import {NavigationActions, DrawerNavigator, StackNavigator} from 'react-navigation'
 
-import Header from './src/component/header'
-import Select from './src/pages/select'
-
+import DrawerNav from './src/navigation/Navigation'
+import LoginNav from './src/navigation/loginNav'
+import Info from './src/pages/routes/information'
 export default class App extends React.Component {
+
   render() {
-    return (
-      <View style={styles.container}>
-        <Header />
-        <Select />
-      </View>
-    );
+    return <LoginNav />;
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#eff7f9',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
 
-});
+AppRegistry.registerComponent('App', () => App);
