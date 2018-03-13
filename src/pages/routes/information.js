@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, ScrollView, TouchableHighlight, Text, Button, Image, StyleSheet, AppRegistry } from 'react-native'
+import {View, ScrollView, TouchableHighlight, Text, Button, Image, StyleSheet, AppRegistry} from 'react-native'
 import { Icon } from 'react-native-elements'
 import { StackNavigator } from 'react-navigation'
 
