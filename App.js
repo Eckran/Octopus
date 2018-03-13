@@ -5,11 +5,11 @@ import {NavigationActions, DrawerNavigator, StackNavigator} from 'react-navigati
 
 import DrawerNav from './src/navigation/Navigation'
 import LoginNav from './src/navigation/loginNav'
-import Info from './src/pages/routes/information'
+import Info from './src/pages/routes/about'
 export default class App extends React.Component {
 
   render() {
-    return <LoginNav />;
+    return <Info />;
   }
 }
 
