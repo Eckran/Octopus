@@ -124,6 +124,7 @@ export default class Register extends React.Component {
                         style={styles.Input}
                         onChangeText={(text) => this.setState({ password: text, })}
                         placeholder={this.state.password}
+                        secureTextEntry={true}
                     />
                     <Image
                         source={require('../../img/trait-input.png')}
@@ -133,6 +134,7 @@ export default class Register extends React.Component {
                         style={styles.Input}
                         onChangeText={(text) => this.setState({ confirmPassword: text, })}
                         placeholder={this.state.confirmPassword}
+                        secureTextEntry={true}
                     />
                     <Image
                         source={require('../../img/trait-input.png')}

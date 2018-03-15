@@ -44,12 +44,12 @@ export default class Contact extends React.Component {
                         <Text style={styles.text}>À PROPOS DE NOTRE LABORATOIRE ET DE L’APPLICATION.</Text>
                         <View style={styles.block}>
                                 <Image
-                                    source={require('../../img/About/partenaire.jpg')}
-                                    style={{ width: 100, height: 120, marginTop: '5%', marginLeft:'10%' }}
+                                    source={require('../../img/About/lssn.png')}
+                                    style={{ width: 210, height: 130, marginTop: '5%', marginLeft:'2%' }}
                                 />
                                 <Image
                                     source={require('../../img/About/partenaire.jpg')}
-                                    style={{ width: 100, height: 120, marginTop: '5%', marginLeft: '20%'}}
+                                    style={{ width: 100, height: 120, marginTop: '5%', marginLeft: '8%'}}
                                 />
                         </View>
                         <Text style={styles.text}>Pour en savoir plus sur la Fondation pour la Recherche Médicale ou connaitre l’association la plus proche de chez vous, veuillez consulter leur site internet : https://www.frm.org/</Text>
