@@ -5,12 +5,6 @@ import { DrawerNavigator, NavigationActions } from 'react-navigation'
 
 //route
 import { Stack } from './RootStack'
-import Suivi from '../pages/suivis'
-import RendezVous from '../pages/rendezvous'
-import Ordonance from '../pages/ordonance'
-import Rappels from '../pages/rappels'
-import Contact from '../pages/contact'
-import Cog from '../pages/cog'
 import Donnees from '../pages/routes/Donees'
 import Moi from '../pages/routes/moi'
 import Conseils from '../pages/routes/conseils'
@@ -22,21 +16,6 @@ const Drawer = DrawerNavigator({
     Menu: {
         screen: Stack,
     },
-    Carnet: {
-        screen: Suivi,
-    },
-    RendezVous: {
-        screen: RendezVous,
-    },
-    Rappels: {
-        screen: Rappels,
-    },
-    Ordonance: {
-        screen: Ordonance,
-    },
-    Contact: {
-        screen: Contact,
-    },
     Donnees: {
         screen: Donnees,
     },
@@ -45,9 +24,6 @@ const Drawer = DrawerNavigator({
     },
     Conseils: {
         screen: Conseils,
-    },
-    Cog: {
-        screen: Cog,
     },
     About: {
         screen: About,
