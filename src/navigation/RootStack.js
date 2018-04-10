@@ -6,7 +6,7 @@ import { StackNavigator, NavigationActions } from 'react-navigation';
 import { HomeScreen } from '../pages/HomeScreen'
 import Suivi from '../pages/suivis'
 import RendezVous from '../pages/rendezvous'
-import Ordonance from '../pages/ordonance'
+import Ordonance from '../pages/ordonance/ordonance'
 import Rappels from '../pages/rappels'
 import Contact from '../pages/contact'
 import Cog from '../pages/cog'

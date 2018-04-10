@@ -9,8 +9,8 @@ import Donnees from '../pages/routes/Donees'
 import Moi from '../pages/routes/moi'
 import Conseils from '../pages/routes/conseils'
 import Probleme from '../pages/routes/probleme'
-import About from '../pages/routes/about'
-import Information from '../pages/routes/information'
+import About from '../pages/information/about'
+import Information from '../pages/information/information'
 
 const Drawer = DrawerNavigator({
     Menu: {

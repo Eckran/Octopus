@@ -1,31 +1,30 @@
-import React, {Component} from 'react'
-import {View, Text, Button, Image, StyleSheet, AppRegistry} from 'react-native'
+import React, { Component } from 'react'
+import { View, Text, StyleSheet,} from 'react-native'
+import { Icon } from 'react-native-elements'
 import { StackNavigator } from 'react-navigation'
 
 export default class Contact extends React.Component {
 
     static navigationOptions = {
-        title: 'Ordonnances',
+        title: 'Ajouté',
         headerStyle: {
             backgroundColor: 'rgba(255, 255, 255, 0)',
         },
         headerTintColor: '#f3f4f4',
         headerTitleStyle: {
             fontSize: 30,
-        }
-      };
+        },
+    };
 
-    render() {
-        return(
-            <View>
-                <Image
-                    source={require('../img/small-couv.png')}
-                    style={styles.header}
-                />
-                <Text> page Ordonnances</Text>
-            </View>
-        )
-    }
+
+render() {
+
+    return (
+        <View>
+            <Text> Add Ordonance Page</Text>
+        </View>
+    )
+}
 }
 
 const styles = StyleSheet.create({
@@ -39,7 +38,10 @@ const styles = StyleSheet.create({
         height: '200%',
         marginTop: '-18%',
         marginLeft: '-5%',
-    }
+    },
 })
 
-AppRegistry.registerComponent('Ordonnance', () => Ordonnace);
+
+// couleur bleu clair : #eef3faff
+//couleur blanc : #f3f4f3
+//couleur violette : #662680
